@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('payment/verification', 'PaymentController@verification');
+Route::post('payment/verification', 'PaymentController@verification');

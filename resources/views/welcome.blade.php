@@ -6,7 +6,7 @@
 <body>
 <!-- <form action="{{url('payment/transaction')}}" method="GET"> -->
     <button id="payment-button">Pay with Khalti</button>
-<!-- </form> -->
+
     <script>
         var config = {
             // replace the publicKey with yours
@@ -21,7 +21,7 @@
                     // hit merchant api for initiating verfication
                     $.ajax({
                         url:"{{url('/payment/verification')}}",
-                        type: 'GET',
+                        type: 'POST',
                         data:{
                             amount : payload.amount,
                             trans_token : payload.token
